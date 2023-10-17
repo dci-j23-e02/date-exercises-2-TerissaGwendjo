@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class AgeCalculator {
     public static void main(String[] args) throws ParseException {
+        //The SimpleDateFormat class can throw a ParseException.We need to handle this exception or declare it in a throws clause.
         Scanner scanner = new Scanner(System.in);
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 
