@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class AgeCalculatorTeacher {
     public static void main(String[]args){
 
-        String pattern = "yyyy-MM-dd";
+        String pattern = "yyyy.MM.dd";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 
         //Using SimpleFormat to format a given date
