@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class AgeCalculator {
     public static void main(String[] args) throws ParseException {
-        //The SimpleDateFormat class can throw a ParseException.We need to handle this exception or declare it in a throws clause.
+        //The SimpleDateFormat class can throw a ParseException.We need to handle
+        // this exception or declare it in a throws clause.
         Scanner scanner = new Scanner(System.in);
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 
@@ -44,6 +45,13 @@ public class AgeCalculator {
 
     // Helper method to convert Date to LocalDate.
     private static LocalDate dateToLocalDate(Date date) {
-        return date.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();
+       LocalDate localDate = date.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();
+
+        return localDate;
+        /*The toInstant() method is called on the Date object (date).
+        It converts the Date object into an Instant. The atZone() method is called on the Instant object.
+        It converts the Instant into a ZonedDateTime object by associating it with a specific time zone.
+        The toLocalDate() method is called on the ZonedDateTime object. It extracts the date part (year, month, day)
+        from the ZonedDateTime and creates a LocalDate object*/
     }
 }
